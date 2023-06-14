@@ -235,6 +235,7 @@ Product.init(
 );
 ```
 **Product Tag**
+
 The ProductTag class initializes a model that contains the description of what the table in the database will correspond to. This table is used to create a relation between products and tags, where one tag can belong to many products, and many products can belong to many tags.
 
 ```js
@@ -273,6 +274,7 @@ ProductTag.init(
 
 
 ### Seeds
+
 The main script call for individual function that will insert data to their specific table in the database.
 ```js
 const seedAll = async () => {
@@ -286,6 +288,7 @@ const seedAll = async () => {
 seedAll();
 ```
 **Example** 
+
 The script structure to seed a table has a JSON variable with mock data that will be input into the table.
 ```js
 const categoryData = [
@@ -302,6 +305,7 @@ const seedCategories = () => Category.bulkCreate(categoryData);
 ```
 
 ### Server - Routes
+
 To start, the main script initializes the Express server and uses routes to redirect the requests to the routes folder, which will handle the HTTP requests accordingly.
 
 ```js
@@ -320,6 +324,7 @@ app.listen(PORT, () => {
 });
 ```
 ### Index - Router
+
 <sub style='font-weight: bold;'>* The next sections will not show in-depth code for the HTTP request but only the Sequelize functions used to accomplish the desired action.</sub>
 
 This script will handle every HTTP request sent to the route folder. If the request is made to the `/api` route, it will be redirected to the API folder router.
@@ -337,6 +342,8 @@ router.use('/tags', tagRoutes);
 ```
 
 ### API - Category
+
+
 Depending on the http request, each of the functions will performe a different set of instructions. 
 * `Get`: this will return all or one by id function, it will include an array of product under that category.
 * `Post`: will insert a new entry using the request body.
@@ -373,6 +380,7 @@ const CategoryData = await Category.destroy({
 ```
 
 ### API - Tag
+
 Depending on the http request, each of the functions will performe a different set of instructions. 
 * `Get`: this will return all or one by id function, it will include an array of product under that tag.
 * `Post`: will insert a new entry using the request body.
