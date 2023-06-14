@@ -120,6 +120,7 @@ module.exports = sequelize;
 
 ### Model
 **Index**
+
 In the main script of the Model folder, it declares the relation to which Sequelize will interpret the data in the database.
 ```js
 Category.hasMany(Product, {
@@ -136,6 +137,7 @@ Tag.belongsToMany(Product, {
 });
 ```
 **Category**
+
 The Category class initializes a model that contains the description of what the table in the database will correspond to.
 ```js
 Category.init(
@@ -161,6 +163,7 @@ Category.init(
 );
 ```
 **Tag**
+
 The Tag class initializes a model that contains the description of what the table in the database will correspond to.
 ```js
 Tag.init(
@@ -185,6 +188,7 @@ Tag.init(
 );
 ```
 **Product**
+
 The Product class initializes a model that contains the description of what the table in the database will correspond to, as well as the table and column to which the referenced value will refer.
 ```js
 Product.init(
