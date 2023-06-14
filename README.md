@@ -3,6 +3,14 @@
 
 ## Description
 
+In this challenge, the provided code serves as a base for completing the task of creating an e-commerce API. The API is responsible for handling requests related to product information and its associated tags and categories. 
+
+To handle the HTTP requests and responses, the code utilizes the `Express` framework, which provides a convenient way to create a server and define routes for handling different endpoints.
+
+For interacting with the database, the code uses `Sequelize`, an Object-Relational Mapping (ORM) library for Node.js. Sequelize simplifies the process of working with databases by providing an abstraction layer and allowing developers to define models that correspond to database tables. 
+
+By leveraging Sequelize's model instances, the server can retrieve, save, and execute commands on the database accurately, depending on the requested action. This allows the API to efficiently handle operations related to products, tags, and categories, ensuring the data is properly stored and retrieved as needed.
+
 ## User Story
 
 ```md
@@ -30,8 +38,20 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Usage
 ### Set Up the Database
+* Start a mysql command line
+```
+mysql> source schema.sql
+```
 ### Seed the Database
+Prefill the database with mock data.
+```
+> npm run seeds
+```
 ### Start the Server
+Start the server.
+```
+> npm start
+```
 
 ## Database Structure
 ### Category
@@ -296,7 +316,7 @@ app.listen(PORT, () => {
 });
 ```
 ### Index - Router
-<sub style='  font-weight: bold;'>* The next sections will not show in-depth code for the HTTP request but only the Sequelize functions used to accomplish the desired action.</sub>
+<sub style='font-weight: bold;'>* The next sections will not show in-depth code for the HTTP request but only the Sequelize functions used to accomplish the desired action.</sub>
 
 This script will handle every HTTP request sent to the route folder. If the request is made to the `/api` route, it will be redirected to the API folder router.
 ```js
@@ -433,7 +453,18 @@ const ProductData = await Product.destroy({
 ```
 
 ## Screenshots
+### Tag
+![Tag-GetAll Image](./assets/Screenshots/Tag-Getall.png)
+![Tag-GetByID Image](./assets/Screenshots/Tag-GetByID.png)
 
+### Category
+![Category-GetAll Image](./assets/Screenshots/Category-Getall.png)
+![Category-GetByID Image](./assets/Screenshots/Category-GetByID.png)
+
+### Product
+![Product-GetAll Image](./assets/Screenshots/Product-Getall.png)
+![Product-GetById Image](./assets/Screenshots/Product-GetById.png)
 
 ## Video
-[![E-commerce API Video ](./assets/Video/VideoGif.gif)]()
+<sub style='font-weight: bold;'>* This is a preview. Click to watch full video.</sub>
+[![E-commerce API Video ](./assets/Video/VideoPreview.gif)](https://1drv.ms/v/s!Asj9JhD05ulbswGw2OSqWZ-qPWOj?e=hcGtvg)
