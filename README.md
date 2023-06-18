@@ -479,4 +479,4 @@ const ProductData = await Product.destroy({
 
 ## Video
 <sub style='font-weight: bold;'>* This is a preview. Click to watch full video.</sub>
-[![E-commerce API Video ](./assets/Video/VideoPreview.gif)](https://1drv.ms/v/s!Asj9JhD05ulbswGw2OSqWZ-qPWOj?e=hcGtvg)
+[![E-commerce API Video ](./assets/Video/VideoPreview.gif)](https://1drv.ms/v/s!Asj9JhD05ulbswJfN65rGbB0XG8L?e=nd1MED)
